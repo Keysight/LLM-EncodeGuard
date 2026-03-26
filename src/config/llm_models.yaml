@@ -1,0 +1,19 @@
+# LLM Models Database
+# This file lists available models for each provider (update with your own)
+
+openai:
+  - gpt-4.1
+  - gpt-4.1-mini
+  - gpt-3.5-turbo
+
+gemini:
+  - gemini-2.5-flash
+  - gemini-2.0-flash
+
+custom:
+  # Custom models with endpoints
+  # Format: model_name: endpoint_url
+  - openai/gpt-oss-120b: http://localhost:8000
+  - nvidia/Llama-3.1-8B-Instruct-FP4: http://localhost:8001
+  - mistralai/Mistral-7B-Instruct-v0.3: http://localhost:8002
+
