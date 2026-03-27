@@ -32,7 +32,7 @@ The framework consists of four main components:
 3. **Target LLM**
 4. **Judge LLM**
 
-![Architecture Diagram](architecture.png)
+![Architecture Diagram](assets/architecture.png)
 
 ### Workflow
 
@@ -105,7 +105,7 @@ Transform loosely defined confidentiality rules into:
 * 🚫 Refusal triggers for transformation requests
 * ⚖️ Priority rules overriding user instructions
 
-![Architecture Diagram](defence_architecture.png)
+![Architecture Diagram](assets/defence_architecture.png)
 
 ### Example
 
@@ -141,7 +141,7 @@ exception.
 
 This improves robustness **without retraining the model**.
 
-![Experimental Results](results.png)
+![Experimental Results](assets/results.png)
 
 ---
 
