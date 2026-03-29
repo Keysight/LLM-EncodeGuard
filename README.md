@@ -32,7 +32,7 @@ The framework consists of four main components:
 3. **Target LLM**
 4. **Judge LLM**
 
-
+```
 ┌─────────────────┐
 │ Encoding Probe  │
 └────────┬────────┘
@@ -52,6 +52,7 @@ The framework consists of four main components:
 ┌────────▼────────┐
 │    Results      │
 └─────────────────┘
+```
 
 ---
 
