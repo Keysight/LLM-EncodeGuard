@@ -32,7 +32,27 @@ The framework consists of four main components:
 3. **Target LLM**
 4. **Judge LLM**
 
-![Architecture Diagram](assets/architecture.png)
+```
+┌─────────────────┐
+│ Encoding Probe  │
+└────────┬────────┘
+         │ Supported Encodings
+┌────────▼────────┐
+│Prompt Generator │
+└────────┬────────┘
+         │ Attack Prompt
+┌────────▼────────┐
+│   Target LLM    │
+└────────┬────────┘
+         │ LLM Response
+┌────────▼────────┐
+│   Judge LLM     │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│    Results      │
+└─────────────────┘
+```
 
 ---
 
@@ -94,7 +114,35 @@ Transform loosely defined confidentiality rules into:
 * ❌ Refusal triggers for transformation requests
 * ⚖️ Priority rules overriding user instructions
 
-![Architecture Diagram](assets/defence_architecture.png)
+```
+ATTACK PATH:                          DEFENSE PATH:
+
+┌─────────────────┐                 ┌─────────────────┐
+│ Encoding Probe  │                 │ Original System │
+└────────┬────────┘                 │   Instruction   │
+         │ Supported Encodings      └────────┬────────┘
+         ▼                                   ▼
+┌─────────────────┐             ┌──────────────────────────┐
+│Prompt Generator │             │        CoT-Based         │
+└────────┬────────┘             │   Instruction Reshaping  │
+         │                      └────────────┬─────────────┘
+         │ Attack Prompt                     │ Hardened System
+         │                                   │  Instruction
+         └──────────────┐     ┌──────────────┘
+                        ▼     ▼
+                  ┌─────────────────┐
+                  │   Target LLM    │
+                  └────────┬────────┘
+                           │ LLM Response
+                           ▼
+                  ┌─────────────────┐
+                  │   Judge LLM     │
+                  └────────┬────────┘
+                           ▼
+                  ┌─────────────────┐
+                  │    Results      │
+                  └─────────────────┘
+```
 
 ### Example
 
