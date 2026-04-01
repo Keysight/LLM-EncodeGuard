@@ -1,6 +1,6 @@
 # LLM-EncodeGuard
 
-**Automated Framework for Evaluating and Hardening LLM System Instructions**
+**Automated Framework for Evaluating and Hardening LLM System Instructions against Encoding Attacks**
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
