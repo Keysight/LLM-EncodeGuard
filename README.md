@@ -687,11 +687,4 @@ Contributions welcome! Please:
 
 ---
 
-## Contact
-
-* Anubhab Sahu — [anubhab.sahu@keysight.com](mailto:anubhab.sahu@keysight.com)
-* Diptisha Samanta — [diptisha.samanta@keysight.com](mailto:diptisha.samanta@keysight.com)
-* Reza Soosahabi — [reza.soosahabi@keysight.com](mailto:reza.soosahabi@keysight.com)
-* Keysight Technologies
-
 **Version**: 1.0.0 | **Last Updated**: March 2026
