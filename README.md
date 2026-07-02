@@ -84,6 +84,22 @@ These requests exploit the model's tendency to treat encoding/formatting tasks a
 
 ---
 
+## Models Evaluated
+
+The following models were tested across all attack techniques and prompt categories:
+
+| Model | Provider |
+|-------|----------|
+| GPT-3.5 Turbo | OpenAI |
+| GPT-4.1 Mini | OpenAI |
+| Gemini 2.5 Flash | Google |
+| Llama 8B | NVIDIA |
+| Granite 4.0 H Small FP8 | IBM |
+| Phi-3.5 MoE Instruct | Microsoft |
+| Mistral Small 4 | Mistral |
+
+---
+
 ## Key Results
 
 * **>90% Attack Success Rate (ASR)** for structured format requests (YAML, TOML)
@@ -178,7 +194,9 @@ exception.
 
 This improves robustness **without retraining the model**.
 
-![Experimental Results](assets/results.png)
+![Results by Technique](assets/results_by_technique.png)
+
+![Results by Category](assets/results_by_category.png)
 
 ---
 
@@ -373,6 +391,19 @@ python src/scripts/run_hardened.py \
   --provider openai \
   --model gpt-4o-mini \
   --mode both
+```
+
+### Parallel Execution
+
+For faster testing, parallel versions of all scripts are available under `src/scripts/parallel/`. Use `--workers` to control concurrency (default: 10, max: 20).
+
+```bash
+# Run attack tests with 10 parallel workers
+python src/scripts/parallel/run_attack_parallel.py \
+  --provider openai \
+  --model gpt-4.1-mini \
+  --prompts "1-80" \
+  --workers 10
 ```
 
 ---
