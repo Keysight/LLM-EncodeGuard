@@ -10,6 +10,9 @@ gemini:
   - gemini-2.5-flash
   - gemini-2.0-flash
 
+claude:
+  - claude-opus-4-1
+
 custom:
   # Custom models with endpoints
   # Format: model_name: endpoint_url

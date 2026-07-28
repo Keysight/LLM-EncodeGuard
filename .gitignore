@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+myenv/
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+
+# Outputs & results
+outputs/
+
+# Temp / backup dataset files
+dataset/*copy*.yaml
+dataset/hardened_prompts_[3-9]*.yaml
+dataset/hardened_prompts_original.yaml
+"results copy/"
+
+# OS
+.DS_Store
+Thumbs.db

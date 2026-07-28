@@ -51,7 +51,7 @@ class CustomLLMProvider(BaseLLMProvider):
                 self.api_url,
                 headers=headers,
                 data=json.dumps(payload),
-                timeout=300,
+                timeout=200,
                 verify=False
             )
             response.raise_for_status()

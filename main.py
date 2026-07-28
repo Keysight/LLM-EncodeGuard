@@ -55,7 +55,7 @@ Examples:
     parser.add_argument(
         "--provider",
         type=str,
-        choices=["openai", "gemini", "custom", "grok"],
+        choices=["openai", "gemini", "custom", "grok", "claude"],
         help="LLM provider to test (default: all providers from config)"
     )
 
